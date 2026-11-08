@@ -10,3 +10,5 @@ __pycache__/
 id_rsa
 id_ed25519
 *.zip
+
+/README_fi.md
