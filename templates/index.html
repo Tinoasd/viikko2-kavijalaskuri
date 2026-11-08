@@ -11,22 +11,22 @@
 <body style="--background-image: url('{{ url_for('static', filename=background) }}')">
     <main class="counter-panel" aria-labelledby="page-title">
         <header>
-            <span class="eyebrow"> <span aria-hidden="true">/</span> </span>
-            <h1 id="page-title">Week 2 Linux Administration</h1>
-            <p class="introduction"></p>
+            <span class="eyebrow"> <span aria-hidden="true"></span> </span>
+            <h1 id="page-title">Week 2</h1>
+            <p class="introduction">Linux Administration</p>
         </header>
 
         <section class="counter" aria-label="Page-view counter">
             <p class="counter-number">{{ "{:,}".format(visits) }}</p>
             <p class="counter-label">TOTAL PAGE VIEWS</p>
             <a class="reload-button" href="{{ url_for('index') }}">
-                Reload &amp; add one <span aria-hidden="true">↻</span>
+                Reload <span aria-hidden="true">↻</span>
             </a>
             <p class="counter-note">Each page load adds one, including repeat visits.</p>
         </section>
 
         <section class="details" aria-labelledby="details-title">
-            <h2 id="details-title">Built to remember</h2>
+            
             <p><strong>Database.</strong> MySQL.</p>
             <p><strong>Storage.</strong> Each page load increments a counter in one database row.
                 The transaction is committed to disk-backed storage, so the value persists
