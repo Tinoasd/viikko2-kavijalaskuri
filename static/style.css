@@ -1,0 +1,105 @@
+:root {
+    color-scheme: dark;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #f2f8f7;
+    background: #071a25;
+    font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 40px 20px;
+    background-image: linear-gradient(135deg, #0210184a, #020e177a), var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.counter-panel {
+    width: min(100%, 650px);
+    padding: clamp(26px, 5vw, 48px);
+    border: 1px solid #d3fff32e;
+    border-radius: 26px;
+    background: linear-gradient(160deg, #142e36e8, #071920ed);
+    box-shadow: 0 24px 100px #0007;
+    backdrop-filter: blur(16px);
+}
+
+header, .counter, footer { text-align: center; }
+
+.eyebrow {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    color: #b5dbd4;
+}
+.eyebrow span { padding: 0 6px; color: #688c8b; }
+
+h1 {
+    margin: 18px 0 9px;
+    font-size: clamp(30px, 6vw, 45px);
+    letter-spacing: -1.8px;
+    line-height: 1.12;
+    font-weight: 650;
+}
+.introduction { margin: 0; font-size: 14px; color: #abc3c3; line-height: 1.6; }
+.counter { padding: 22px 0 28px; }
+.counter-number {
+    margin: 0;
+    font-size: clamp(68px, 18vw, 118px);
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -6px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    color: #b8f4dc;
+}
+.counter-label { margin: 0 0 24px; font-size: 10px; letter-spacing: 3px; color: #acc4c2; }
+.reload-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 46px;
+    padding: 11px 22px;
+    border: 1px solid #b6f5dc8c;
+    border-radius: 999px;
+    background: #c1f8df;
+    color: #102e2b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 650;
+    transition: background .15s ease, transform .15s ease;
+}
+.reload-button:hover { background: #e1ffef; transform: translateY(-1px); }
+.reload-button:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+.reload-button span { font-size: 20px; font-weight: 400; line-height: 1; }
+.counter-note { margin: 13px 0 0; color: #91adaa; font-size: 11px; line-height: 1.6; }
+
+.details { border-top: 1px solid #d2fff120; padding-top: 25px; }
+.details h2 { font-size: 15px; font-weight: 600; margin: 0 0 15px; color: #e0eee9; }
+.details p { font-size: 12px; line-height: 1.8; color: #adc2c0; margin: 8px 0; }
+.details strong { color: #dcece6; font-weight: 600; }
+.test-results { margin-top: 14px; padding-top: 6px; }
+footer { margin-top: 26px; font-size: 9px; letter-spacing: 1.5px; color: #82a4a1; line-height: 1.8; }
+footer span { padding: 0 7px; color: #547875; }
+
+@media (max-width: 440px) {
+    body { padding: 18px 12px; }
+    .counter-panel { padding: 28px 22px; border-radius: 20px; }
+    .eyebrow { font-size: 8px; letter-spacing: 1.4px; }
+    h1 { letter-spacing: -1.1px; }
+    .counter-number { letter-spacing: -3px; }
+    footer { letter-spacing: 1px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reload-button { transition: none; }
+}

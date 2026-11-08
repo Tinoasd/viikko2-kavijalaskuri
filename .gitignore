@@ -1,0 +1,12 @@
+
+.env
+.env.*
+*.env
+.venv/
+__pycache__/
+.ssh/
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.zip
