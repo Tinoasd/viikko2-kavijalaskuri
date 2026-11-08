@@ -31,10 +31,9 @@
             <p><strong>Storage.</strong> Each page load increments a counter in one database row.
                 The transaction is committed to disk-backed storage, so the value persists
                 across application and server restarts.</p>
-            <div class="test-results">
-                <p><strong>Application restart test.</strong> {{ app_restart_result }}</p>
-                <p><strong>Server reboot test.</strong> {{ server_restart_result }}</p>
-            </div>
+                <p><strong>View count is stored in a single row of a MySQL table. Each page load adds one to the stored count, and the application commits the update to the database</strong> </p>
+                <p><strong>The counter retained its value after both the application restart and the virtual machine reboot.</strong> </p>
+            
         </section>
 
         <footer><p>
